@@ -62,7 +62,7 @@ const MenuPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {category.items.map((item) => (
                 <div key={item.name} className="bg-white shadow-lg rounded-lg overflow-hidden">
-                  <img src={item.image} alt={item.name} className="w-full h-48 object-cover" />
+                  <Image src={item.image} alt={item.name} className="w-full h-48 object-cover" />
                   <div className="p-4">
                     <h3 className="text-xl font-semibold text-[#5FE26C]">{item.name}</h3>
                     <p className="text-[#90BD95] mt-2">{item.description}</p>
