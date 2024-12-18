@@ -10,7 +10,6 @@ import {
 import { useRef } from "react";
 import { cn } from "@/lib/utils";
 
-// Define the Button component's props
 export function Button({
   borderRadius = "1.75rem",
   children,
@@ -23,14 +22,13 @@ export function Button({
 }: {
   borderRadius?: string;
   children: React.ReactNode;
-  as?: React.ElementType; // Allow for any valid element type (e.g., 'button', 'div')
+  as?: any;
   containerClassName?: string;
   borderClassName?: string;
   duration?: number;
   className?: string;
-  // Use `React.ComponentPropsWithRef<Component>` to get the correct props for the component passed as `as`.
-  // This will automatically infer the props based on the element type passed to `as`
-} & React.ComponentPropsWithRef<React.ElementType>) {
+  [key: string]: any;
+}) {
   return (
     <Component
       className={cn(
@@ -40,7 +38,7 @@ export function Button({
       style={{
         borderRadius: borderRadius,
       }}
-      {...otherProps} // Pass down otherProps
+      {...otherProps}
     >
       <div
         className="absolute inset-0"
@@ -58,7 +56,7 @@ export function Button({
 
       <div
         className={cn(
-          "relative bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
+          "relative bg-slate-900/[0.8] border border-slate-700 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
           className
         )}
         style={{
@@ -71,7 +69,6 @@ export function Button({
   );
 }
 
-// Define the MovingBorder component's props
 export const MovingBorder = ({
   children,
   duration = 2000,
@@ -83,9 +80,9 @@ export const MovingBorder = ({
   duration?: number;
   rx?: string;
   ry?: string;
-  // Allow otherProps to accept any additional props for the SVG element
-} & React.SVGProps<SVGSVGElement>) => {
-  const pathRef = useRef<SVGRectElement | null>(null); // Fixing 'any'
+  [key: string]: any;
+}) => {
+  const pathRef = useRef<any>();
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
@@ -98,7 +95,7 @@ export const MovingBorder = ({
 
   const x = useTransform(
     progress,
-    (val) => pathRef.current?.getPointAtLength(val).x
+    (val) => pathRef.current?.getPointAtLength(20).x
   );
   const y = useTransform(
     progress,
@@ -115,7 +112,7 @@ export const MovingBorder = ({
         className="absolute h-full w-full"
         width="100%"
         height="100%"
-        {...otherProps} // Pass down any additional props for the SVG
+        {...otherProps}
       >
         <rect
           fill="none"

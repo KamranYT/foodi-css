@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Button } from "@/components/ui/moving-border";
+import { Button } from "@/components/ui/button";
 import { FaGift } from "react-icons/fa";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import { BiTimer } from "react-icons/bi";
@@ -57,28 +57,13 @@ const Services = () => {
         </h3>
         <div className="flex flex-col xl:flex-row items-center gap-8">
           <Button
-            borderRadius="1rem" // Customize the border radius
-            containerClassName="hover:shadow-lg" // Additional outer container styles
-            borderClassName="bg-[#39DB4A]" // Border color and gradient
-            className="uppercase flex items-center gap-2 tracking-wider text-white hover:bg-[#2EB93D]" // Inner button styles
-            duration={3000} // Optional: Animation duration for the moving border
+             // Border color and gradient
+            className="h-16 uppercase flex items-center gap-2 tracking-wider text-white hover:bg-[#2EB93D]" // Inner button styles
+             // Optional: Animation duration for the moving border
             size="lg" // Pass additional props if needed
           >
             <span>Order Now</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="currentColor"
-              className="w-4 h-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M5 12h14M12 5l7 7-7 7"
-              />
-            </svg>
+            
           </Button>
         </div>
       </div>

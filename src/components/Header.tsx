@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "./ui/moving-border";
+import { Button } from "./ui/button";
 import Image from "next/image";
 // components
 import Nav from "./Nav";
@@ -36,11 +36,9 @@ const Header: React.FC = () => {
               Contact
             </Button> */}
             <Button
-              borderRadius="1rem" // Customize the border radius
-              containerClassName="hover:shadow-lg" // Additional outer container styles
-              borderClassName="bg-[#39DB4A]" // Border color and gradient
-              className="uppercase flex items-center gap-2 tracking-wider text-white hover:bg-[#2EB93D]" // Inner button styles
-              duration={3000} // Optional: Animation duration for the moving border
+              
+              className="h-16 uppercase flex items-center gap-2 tracking-wider text-white hover:bg-[#2EB93D]" // Inner button styles
+             // Optional: Animation duration for the moving border
               size="lg" // Pass additional props if needed
             >
               <span>
@@ -48,20 +46,6 @@ const Header: React.FC = () => {
                 <BsTelephoneOutbound className="mr-1" />{" "}
               </span>{" "} 
               Contact
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                className="w-4 h-4"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M5 12h14M12 5l7 7-7 7"
-                />
-              </svg>
             </Button>
           </Link>
         </div>

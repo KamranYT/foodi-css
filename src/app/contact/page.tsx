@@ -2,8 +2,7 @@
 
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { Button } from "@/components/ui/moving-border";
-import { LuSendHorizontal } from "react-icons/lu";
+import { Button } from "@/components/ui/button";
 
 const ContactPage = () => {
   return (
@@ -94,15 +93,13 @@ const ContactPage = () => {
             </div>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
-                borderRadius="1rem" // Customize the border radius
-                containerClassName="hover:shadow-lg" // Additional outer container styles
-                borderClassName="bg-[#39DB4A]" // Border color and gradient
-                className="uppercase flex items-center gap-2 tracking-wider text-white hover:bg-[#2EB93D]" // Inner button styles
-                duration={3000} // Optional: Animation duration for the moving border
+                 
+                className="h-16 uppercase flex items-center gap-2 tracking-wider text-white hover:bg-[#2EB93D] rounded-md" // Inner button styles
+                 // Optional: Animation duration for the moving border
                 size="lg" // Pass additional props if needed
               >
                 <span>Send Message</span>
-                <LuSendHorizontal />
+                
               </Button>
             </div>
           </form>

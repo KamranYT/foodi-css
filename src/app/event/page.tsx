@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/moving-border";
+import { Button } from "@/components/ui/button";
 
 // Events Data
 const events = [
@@ -74,11 +74,9 @@ const EventsPage = () => {
               <p className="text-[#555555] mb-4">{event.description}</p>
               <div className="flex flex-col xl:flex-row items-center gap-8 justify-center">
                 <Button
-                  borderRadius="1rem" // Customize the border radius
-                  containerClassName="hover:shadow-lg" // Additional outer container styles
-                  borderClassName="bg-[#39DB4A]" // Border color and gradient
+                  
                   className="uppercase flex items-center gap-2 tracking-wider text-white bg-[#2EB93D] hover:bg-[#39DB4A]" // Inner button styles
-                  duration={3000} // Optional: Animation duration for the moving border
+                  
                   size="lg" // Pass additional props if needed
                 >
                   <span>Learn More</span>
@@ -114,11 +112,9 @@ const EventsPage = () => {
         </Button> */}
         <div className="flex flex-col xl:flex-row items-center justify-center gap-8">
           <Button
-            borderRadius="1rem" // Customize the border radius
-            containerClassName="hover:shadow-lg" // Additional outer container styles
-            borderClassName="bg-[#39DB4A]" // Border color and gradient
+         
             className="uppercase flex items-center gap-2 tracking-wider text-white bg-[#FF6868] hover:bg-[#e55e5e] font-semibold" // Inner button styles
-            duration={3000} // Optional: Animation duration for the moving border
+           
             size="lg" // Pass additional props if needed
           >
             <span>Get In Touch</span>

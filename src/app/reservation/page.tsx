@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/moving-border";
+import { Button } from "@/components/ui/button";
 import { LuSendHorizontal } from "react-icons/lu";
 
 const ReservationPage = () => {
@@ -137,11 +137,9 @@ const ReservationPage = () => {
         {/* Submit Button */}
         <div className="flex flex-col xl:flex-row items-center gap-8">
           <Button
-            borderRadius="1rem" // Customize the border radius
-            containerClassName="hover:shadow-lg" // Additional outer container styles
-            borderClassName="bg-[#39DB4A]" // Border color and gradient
+           // Border color and gradient
             className="uppercase flex items-center gap-2 tracking-wider text-white hover:bg-[#2EB93D]" // Inner button styles
-            duration={3000} // Optional: Animation duration for the moving border
+             // Optional: Animation duration for the moving border
             size="lg" // Pass additional props if needed
           >
             <span>Reserve Table</span>
