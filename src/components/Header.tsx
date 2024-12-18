@@ -13,13 +13,13 @@ const Header: React.FC = () => {
         {/* logo */}
         <Link href="/">
           <h1>
-          <Image
-  src="/foodi.png"
-  alt="Foodi Logo"
-  width={120}
-  height={10}// Optionally, define a height or use auto if aspect ratio matters
-  className="w-[150px]"
-/> 
+            <Image
+             src="/foodi.png"
+             alt="Foodi Logo"
+             width={130}
+             height={1}// Optionally, define a height or use auto if aspect ratio matters
+            //  className="w-[120px]"
+            /> 
           </h1>
         </Link>
 

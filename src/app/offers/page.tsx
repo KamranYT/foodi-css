@@ -112,7 +112,7 @@ const work = () => {
         price: '$15.99',
       },
       {
-        imageSrc: '/assets/offers/offer13.png',
+        imageSrc: '/assets/offers/offer14.png',
         title: 'Evening Snack Box',
         description: 'Fries + nuggets.',
         price: '$10.99',

@@ -33,9 +33,9 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-12 px-6 md:px-12 lg:px-20 flex flex-col md:flex-row justify-center items-start gap-12 lg:gap-20">
+    <section className="py-12 px-6 md:px-12 lg:px-20 flex flex-col md:flex-row justify-center items-center gap-12 lg:gap-20">
       {/* Left Section */}
-      <div className="flex-1 max-w-lg text-center md:text-left">
+      <div className="flex-1 max-w-lg text-center md:text-left mx-auto">
         <h1 className="text-[#FF6868] mb-4 font-bold tracking-wider text-sm md:text-base">
           OUR STORY & SERVICES
         </h1>
@@ -57,7 +57,7 @@ const Services = () => {
       </div>
 
       {/* Right Section - Service Grid */}
-      <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-2xl">
+      <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-2xl mx-auto">
         {services.map((service, index) => (
           <div
             key={index}
@@ -80,95 +80,3 @@ const Services = () => {
 };
 
 export default Services;
-
-
-
-
-// "use client";
-
-// import React from "react";
-
-// const services = [
-//   {
-//     title: "Dine-In Service",
-//     description:
-//       "Enjoy a cozy ambiance and freshly prepared meals at our beautiful dine-in space.",
-//     icon: "🍽️",
-//   },
-//   {
-//     title: "Takeaway",
-//     description:
-//       "Order your favorite meals and pick them up at your convenience with our takeaway option.",
-//     icon: "🥡",
-//   },
-//   {
-//     title: "Delivery",
-//     description:
-//       "Get delicious food delivered straight to your doorstep, hot and fresh.",
-//     icon: "🚚",
-//   },
-//   {
-//     title: "Catering Services",
-//     description:
-//       "Planning a party or event? Let us handle the food with our premium catering services.",
-//     icon: "🎉",
-//   },
-//   {
-//     title: "Online Reservation",
-//     description:
-//       "Reserve your table ahead of time with our easy online reservation system.",
-//     icon: "🗓️",
-//   },
-//   {
-//     title: "Private Dining",
-//     description:
-//       "Enjoy exclusive dining experiences in our private spaces for family or business gatherings.",
-//     icon: "🏠",
-//   },
-//   {
-//     title: "Special Discounts",
-//     description:
-//       "Avail special discounts for students, corporate events, and large group bookings.",
-//     icon: "💸",
-//   },
-//   {
-//     title: "Gift Cards",
-//     description:
-//       "Surprise your loved ones with our customizable Foodi gift cards.",
-//     icon: "🎁",
-//   },
-// ];
-
-// export default function ServicesPage() {
-//   return (
-//     <section className="py-12 bg-gray-50">
-//       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-//         {/* Page Header */}
-//         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
-//           Our Services
-//         </h1>
-//         <p className="text-gray-600 mb-12 max-w-3xl mx-auto">
-//           Explore the wide range of services we offer to make your dining
-//           experience extraordinary. From dine-in to catering, we’ve got you
-//           covered.
-//         </p>
-
-//         {/* Services Grid */}
-//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
-//           {services.map((service, index) => (
-//             <div
-//               key={index}
-//               className="p-6 bg-white border rounded-lg shadow-md hover:shadow-xl transform transition duration-300 hover:-translate-y-2"
-//             >
-//               <div className="text-5xl mb-4">{service.icon}</div>
-//               <h2 className="text-xl font-semibold mb-2 text-gray-800">
-//                 {service.title}
-//               </h2>
-//               <p className="text-gray-600 text-sm">{service.description}</p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }

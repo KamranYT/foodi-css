@@ -59,10 +59,17 @@ const MenuPage = () => {
         {menuItems.map((category) => (
           <div key={category.id}>
             <h2 className="text-3xl font-semibold text-[#FF6868] my-4">{category.category}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
               {category.items.map((item) => (
-                <div key={item.name} className="bg-white shadow-lg rounded-lg overflow-hidden">
-                  <Image src={item.image} alt={item.name} className="w-full h-48 object-cover" />
+                <div key={item.name} className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                 <div className='relative w-full h-48'>
+                 <Image 
+                 src={item.image} 
+                 alt={item.name}
+                 fill 
+                 className="object-cover" />
+                 </div>
+                  
                   <div className="p-4">
                     <h3 className="text-xl font-semibold text-[#5FE26C]">{item.name}</h3>
                     <p className="text-[#90BD95] mt-2">{item.description}</p>

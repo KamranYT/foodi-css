@@ -42,7 +42,7 @@ const MobileNav: React.FC = () => {
             <Image
               src="/foodi.png"
               alt="Foodi Logo"
-              width={200}
+              width={150}
               height={1}
             />
           </Link>
