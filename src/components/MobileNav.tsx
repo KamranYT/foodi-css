@@ -34,20 +34,14 @@ const MobileNav: React.FC = () => {
       {/* Sheet Content */}
       <SheetContent className="flex flex-col">
         {/* Required DialogTitle */}
-        <DialogTitle className="sr-only">Navigation Menu</DialogTitle> {/* Visually hidden title */}
-
+        <DialogTitle className="sr-only">Navigation Menu</DialogTitle>{" "}
+        {/* Visually hidden title */}
         {/* Logo Section */}
         <div className="mt-32 mb-40 ml-24 text-4xl">
           <Link href="/">
-            <Image
-              src="/foodi.png"
-              alt="Foodi Logo"
-              width={150}
-              height={1}
-            />
+            <Image src="/foodi.png" alt="Foodi Logo" width={150} height={1} />
           </Link>
         </div>
-
         {/* Navigation Links */}
         <nav className="flex flex-col justify-center items-center gap-8">
           {links.map((link, index) => (

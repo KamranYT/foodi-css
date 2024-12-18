@@ -10,7 +10,11 @@ type WorkSliderBtnsProps = {
   iconsStyle: string;
 };
 
-const WorkSliderBtns: React.FC<WorkSliderBtnsProps> = ({ containerStyles, btnStyles, iconsStyle }) => {
+const WorkSliderBtns: React.FC<WorkSliderBtnsProps> = ({
+  containerStyles,
+  btnStyles,
+  iconsStyle,
+}) => {
   const swiper = useSwiper();
 
   return (

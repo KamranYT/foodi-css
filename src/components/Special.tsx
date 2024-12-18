@@ -50,7 +50,9 @@ const SpecialDish = () => {
 
   const handlePrevious = () => {
     setCurrentIndex((prev) =>
-      prev === 0 ? dishes.length - 3 : (prev - 1 + dishes.length) % dishes.length
+      prev === 0
+        ? dishes.length - 3
+        : (prev - 1 + dishes.length) % dishes.length
     );
   };
 
@@ -80,13 +82,13 @@ const SpecialDish = () => {
         <div className="carousel">
           {dishes.slice(currentIndex, currentIndex + 3).map((dish) => (
             <div className="card" key={dish.id}>
-             <Image
-             src={dish.image}   // Image path or URL
-             alt={dish.name}    // Alt text for accessibility
-             width={300}        // Set a proper width (adjust as needed)
-             height={200}       // Set a proper height (adjust as needed)
-             className="custom-class" // Optional, your CSS class
-             priority           // Optional: prioritize loading for important images
+              <Image
+                src={dish.image} // Image path or URL
+                alt={dish.name} // Alt text for accessibility
+                width={300} // Set a proper width (adjust as needed)
+                height={200} // Set a proper height (adjust as needed)
+                className="custom-class" // Optional, your CSS class
+                priority // Optional: prioritize loading for important images
               />
 
               <div className="card-content">

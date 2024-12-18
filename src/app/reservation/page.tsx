@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/moving-border";
+import { LuSendHorizontal } from "react-icons/lu";
 
 const ReservationPage = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +13,9 @@ const ReservationPage = () => {
     guests: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -46,7 +49,9 @@ const ReservationPage = () => {
       >
         {/* Name */}
         <div>
-          <label className="block text-[#555555] font-semibold mb-2">Full Name</label>
+          <label className="block text-[#555555] font-semibold mb-2">
+            Full Name
+          </label>
           <input
             type="text"
             name="name"
@@ -60,7 +65,9 @@ const ReservationPage = () => {
 
         {/* Email */}
         <div>
-          <label className="block text-[#555555] font-semibold mb-2">Email Address</label>
+          <label className="block text-[#555555] font-semibold mb-2">
+            Email Address
+          </label>
           <input
             type="email"
             name="email"
@@ -76,7 +83,9 @@ const ReservationPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Date */}
           <div>
-            <label className="block text-[#555555] font-semibold mb-2">Date</label>
+            <label className="block text-[#555555] font-semibold mb-2">
+              Date
+            </label>
             <input
               type="date"
               name="date"
@@ -89,7 +98,9 @@ const ReservationPage = () => {
 
           {/* Time */}
           <div>
-            <label className="block text-[#555555] font-semibold mb-2">Time</label>
+            <label className="block text-[#555555] font-semibold mb-2">
+              Time
+            </label>
             <input
               type="time"
               name="time"
@@ -103,7 +114,9 @@ const ReservationPage = () => {
 
         {/* Guests */}
         <div>
-          <label className="block text-[#555555] font-semibold mb-2">Number of Guests</label>
+          <label className="block text-[#555555] font-semibold mb-2">
+            Number of Guests
+          </label>
           <select
             name="guests"
             value={formData.guests}
@@ -122,12 +135,19 @@ const ReservationPage = () => {
         </div>
 
         {/* Submit Button */}
-        <Button
-          type="submit"
-          className="w-full py-3 bg-[#39DB4A] text-white font-bold uppercase rounded-md hover:bg-[#34c43e] transition duration-300"
-        >
-          Reserve Table
-        </Button>
+        <div className="flex flex-col xl:flex-row items-center gap-8">
+          <Button
+            borderRadius="1rem" // Customize the border radius
+            containerClassName="hover:shadow-lg" // Additional outer container styles
+            borderClassName="bg-[#39DB4A]" // Border color and gradient
+            className="uppercase flex items-center gap-2 tracking-wider text-white hover:bg-[#2EB93D]" // Inner button styles
+            duration={3000} // Optional: Animation duration for the moving border
+            size="lg" // Pass additional props if needed
+          >
+            <span>Reserve Table</span>
+            <LuSendHorizontal />
+          </Button>
+        </div>
       </form>
     </section>
   );

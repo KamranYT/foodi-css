@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "./ui/moving-border";
 import Image from "next/image";
 // components
 import Nav from "./Nav";
@@ -14,12 +14,12 @@ const Header: React.FC = () => {
         <Link href="/">
           <h1>
             <Image
-             src="/foodi.png"
-             alt="Foodi Logo"
-             width={130}
-             height={1}// Optionally, define a height or use auto if aspect ratio matters
-            //  className="w-[120px]"
-            /> 
+              src="/foodi.png"
+              alt="Foodi Logo"
+              width={130}
+              height={1} // Optionally, define a height or use auto if aspect ratio matters
+              //  className="w-[120px]"
+            />
           </h1>
         </Link>
 
@@ -27,7 +27,42 @@ const Header: React.FC = () => {
         <div className="hidden xl:flex items-center gap-80">
           <Nav />
           <Link href="/contact">
-            <Button> <span> <BsTelephoneOutbound className="mr-5" /> </span>  Contact</Button>
+            {/* <Button>
+              {" "}
+              <span>
+                {" "}
+                <BsTelephoneOutbound className="mr-5" />{" "}
+              </span>{" "}
+              Contact
+            </Button> */}
+            <Button
+              borderRadius="1rem" // Customize the border radius
+              containerClassName="hover:shadow-lg" // Additional outer container styles
+              borderClassName="bg-[#39DB4A]" // Border color and gradient
+              className="uppercase flex items-center gap-2 tracking-wider text-white hover:bg-[#2EB93D]" // Inner button styles
+              duration={3000} // Optional: Animation duration for the moving border
+              size="lg" // Pass additional props if needed
+            >
+              <span>
+                {" "}
+                <BsTelephoneOutbound className="mr-1" />{" "}
+              </span>{" "} 
+              Contact
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                className="w-4 h-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 12h14M12 5l7 7-7 7"
+                />
+              </svg>
+            </Button>
           </Link>
         </div>
 

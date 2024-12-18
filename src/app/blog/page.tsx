@@ -54,8 +54,8 @@ const BlogPage = () => {
           Explore the Latest from Our Kitchen
         </h2>
         <p className="mt-4 text-lg text-[#555555] max-w-2xl mx-auto">
-          Discover insights, recipes, and tips to enhance your dining experience.
-          Stay updated with what is cooking at Foodi!
+          Discover insights, recipes, and tips to enhance your dining
+          experience. Stay updated with what is cooking at Foodi!
         </p>
       </header>
 

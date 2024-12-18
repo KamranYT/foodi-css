@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaYoutube, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaYoutube, FaTwitter } from "react-icons/fa";
 
 // Define the type for each social media item
 type SocialItem = {
-  icon: JSX.Element;  // The icon is a JSX element
-  path: string;       // The path is a string (URL)
+  icon: JSX.Element; // The icon is a JSX element
+  path: string; // The path is a string (URL)
 };
 
 const socials: SocialItem[] = [

@@ -33,8 +33,10 @@ const TestimonialSection = () => {
           What Our Customers <br className="hidden lg:block" /> Say About Us
         </h2>
         <p className="text-[#555555] mb-6 leading-relaxed font-medium text-sm sm:text-base lg:text-2xl">
-          “I had the pleasure of dining at Foodi last night, and <br className="hidden sm:block" />
-          I am still raving about the experience! The attention to <br className="hidden sm:block" />
+          “I had the pleasure of dining at Foodi last night, and{" "}
+          <br className="hidden sm:block" />
+          I am still raving about the experience! The attention to{" "}
+          <br className="hidden sm:block" />
           detail in presentation and service was impeccable.”
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -68,7 +70,8 @@ const TestimonialSection = () => {
               Customer Feedback
             </p>
             <p className="text-sm sm:text-lg text-gray-400 font-medium">
-              <span className="text-[#454545] font-semibold">⭐ 4.9</span> (18.6k Reviews)
+              <span className="text-[#454545] font-semibold">⭐ 4.9</span>{" "}
+              (18.6k Reviews)
             </p>
           </div>
         </div>

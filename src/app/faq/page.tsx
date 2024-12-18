@@ -9,15 +9,18 @@ const faqData = [
   },
   {
     question: "Do you offer home delivery?",
-    answer: "Yes, we provide home delivery services for all orders placed online.",
+    answer:
+      "Yes, we provide home delivery services for all orders placed online.",
   },
   {
     question: "Are there vegetarian and vegan options available?",
-    answer: "Yes, we have a wide selection of vegetarian and vegan dishes on our menu.",
+    answer:
+      "Yes, we have a wide selection of vegetarian and vegan dishes on our menu.",
   },
   {
     question: "How can I make a reservation?",
-    answer: "You can reserve a table using our website's reservation page or call us directly.",
+    answer:
+      "You can reserve a table using our website's reservation page or call us directly.",
   },
   {
     question: "Do you cater for private events?",
@@ -30,11 +33,13 @@ const faqData = [
   },
   {
     question: "Can I modify or cancel my reservation?",
-    answer: "Yes, you can modify or cancel your reservation by calling us at least 24 hours in advance.",
+    answer:
+      "Yes, you can modify or cancel your reservation by calling us at least 24 hours in advance.",
   },
   {
     question: "Do you have gluten-free options?",
-    answer: "Yes, we offer a variety of gluten-free dishes. Please ask our staff for recommendations.",
+    answer:
+      "Yes, we offer a variety of gluten-free dishes. Please ask our staff for recommendations.",
   },
   {
     question: "Is there parking available at your restaurant?",
@@ -42,7 +47,8 @@ const faqData = [
   },
   {
     question: "Do you offer discounts for large group bookings?",
-    answer: "Yes, we offer special discounts for group bookings. Contact us for more details.",
+    answer:
+      "Yes, we offer special discounts for group bookings. Contact us for more details.",
   },
 ];
 

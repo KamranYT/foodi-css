@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 // Category Item Component
 type CategoryProps = {
@@ -10,9 +10,15 @@ type CategoryProps = {
   imgHeight: number; // Use numbers for height
 };
 
-const CategoryItem = ({ title, description, imageSrc, imgWidth, imgHeight }: CategoryProps) => {
+const CategoryItem = ({
+  title,
+  description,
+  imageSrc,
+  imgWidth,
+  imgHeight,
+}: CategoryProps) => {
   return (
-    <div className="w-[326px] h-[326px] flex flex-col items-center justify-center bg-white shadow-md rounded-lg">
+    <div className="w-[326px] h-[326px] flex flex-col items-center justify-center bg-white shadow-md rounded-3xl">
       {/* Circle Container */}
       <div className="w-[153px] h-[153px] flex items-center justify-center rounded-full bg-[#C1F1C6]">
         {/* Image with width and height */}
@@ -25,7 +31,9 @@ const CategoryItem = ({ title, description, imageSrc, imgWidth, imgHeight }: Cat
         />
       </div>
       {/* Title and Description */}
-      <h3 className="mt-4 text-lg font-bold text-center text-[#1E1E1E]">{title}</h3>
+      <h3 className="mt-4 text-lg font-semibold tracking-wider pt-2 text-center text-[#1E1E1E]">
+        {title}
+      </h3>
       <p className="text-gray-500 text-sm text-center">{description}</p>
     </div>
   );
@@ -35,30 +43,30 @@ const CategoryItem = ({ title, description, imageSrc, imgWidth, imgHeight }: Cat
 const CategoryGrid = () => {
   const categories = [
     {
-      title: 'Main Dish',
-      description: '(86 dishes)',
-      imageSrc: '/category1.png',
+      title: "Main Dish",
+      description: "(86 dishes)",
+      imageSrc: "/category1.png",
       imgWidth: 139, // Numeric width
       imgHeight: 102, // Numeric height
     },
     {
-      title: 'Breakfast',
-      description: '(12 break fast)',
-      imageSrc: '/category2.png',
+      title: "Breakfast",
+      description: "(12 break fast)",
+      imageSrc: "/category2.png",
       imgWidth: 110,
       imgHeight: 72,
     },
     {
-      title: 'Dessert',
-      description: '(48 dessert)',
-      imageSrc: '/category3.png',
+      title: "Dessert",
+      description: "(48 dessert)",
+      imageSrc: "/category3.png",
       imgWidth: 111,
       imgHeight: 98,
     },
     {
-      title: 'Browse All',
-      description: '(255 Items)',
-      imageSrc: '/category4.png',
+      title: "Browse All",
+      description: "(255 Items)",
+      imageSrc: "/category4.png",
       imgWidth: 77,
       imgHeight: 92,
     },
@@ -68,8 +76,12 @@ const CategoryGrid = () => {
     <div className="flex flex-col items-center justify-center p-4 sm:p-6 md:p-8">
       {/* Heading and Subheading */}
       <div className="mb-8 text-center">
-        <p className="text-red-500 text-sm tracking-wider font-semibold">CUSTOMER FAVORITES</p>
-        <h2 className="text-2xl sm:text-3xl font-bold tracking-wide text-black">Popular Categories</h2>
+        <p className="text-red-500 text-sm tracking-wider font-semibold">
+          CUSTOMER FAVORITES
+        </p>
+        <h2 className="text-2xl sm:text-4xl font-bold tracking-wide text-black">
+          Popular Categories
+        </h2>
       </div>
 
       {/* Category Grid */}

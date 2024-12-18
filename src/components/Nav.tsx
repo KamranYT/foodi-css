@@ -13,25 +13,25 @@ interface LinkItem {
 // Define the links array with typed objects
 const links: LinkItem[] = [
   {
-    name: 'home',
+    name: "home",
     path: "/",
   },
   {
-    name: 'services',
+    name: "services",
     path: "/services",
   },
   {
-    name: 'menu',
+    name: "menu",
     path: "/menu",
   },
   {
-    name: 'offers',
+    name: "offers",
     path: "/offers",
   },
 ];
 
 const Nav: React.FC = () => {
-  const pathname = usePathname();  // pathname will be a string
+  const pathname = usePathname(); // pathname will be a string
 
   return (
     <nav className="flex gap-20 font-medium">
@@ -41,7 +41,8 @@ const Nav: React.FC = () => {
             href={link.path}
             key={index}
             className={`${
-              link.path === pathname && "text-[#39DB4A] border-b-2 border-[#39DB4A]"
+              link.path === pathname &&
+              "text-[#39DB4A] border-b-2 border-[#39DB4A]"
             } capitalize font-medium hover:text-[#39DB4A] transition-all `}
           >
             {link.name}

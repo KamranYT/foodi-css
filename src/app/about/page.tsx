@@ -50,9 +50,7 @@ const AboutUsPage = () => {
           className="rounded-lg shadow-lg object-cover w-full md:w-1/2"
         />
         <div className="flex-1 text-center md:text-left">
-          <h3 className="text-2xl font-bold text-[#39DB4A] mb-4">
-            Our Story
-          </h3>
+          <h3 className="text-2xl font-bold text-[#39DB4A] mb-4">Our Story</h3>
           <p className="text-[#555555] text-lg leading-relaxed mb-4">
             Founded in 2015, Foodi began as a small family-owned restaurant with
             one goal: to serve delicious food with exceptional hospitality. Our
@@ -87,8 +85,8 @@ const AboutUsPage = () => {
               Exceptional Service
             </h4>
             <p className="text-[#555555] leading-relaxed">
-              Our team strives to provide warm, welcoming, and attentive
-              service to every guest.
+              Our team strives to provide warm, welcoming, and attentive service
+              to every guest.
             </p>
           </div>
           <div>
