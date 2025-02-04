@@ -2,53 +2,35 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import { BsTelephoneOutbound } from "react-icons/bs";
+import styles from "@/styles/Nav.module.css";
 
-// Define the type for each link in the links array
 interface LinkItem {
   name: string;
   path: string;
 }
 
-// Define the links array with typed objects
 const links: LinkItem[] = [
-  {
-    name: "home",
-    path: "/",
-  },
-  {
-    name: "services",
-    path: "/services",
-  },
-  {
-    name: "menu",
-    path: "/menu",
-  },
-  {
-    name: "offers",
-    path: "/offers",
-  },
+  { name: "home", path: "/" },
+  { name: "about", path: "/about" },
+  { name: "services", path: "/services" },
 ];
 
 const Nav: React.FC = () => {
-  const pathname = usePathname(); // pathname will be a string
+  const pathname = usePathname();
 
   return (
-    <nav className="flex gap-20 font-medium">
-      {links.map((link, index) => {
-        return (
-          <Link
-            href={link.path}
-            key={index}
-            className={`${
-              link.path === pathname &&
-              "text-[#39DB4A] border-b-2 border-[#39DB4A]"
-            } capitalize font-medium hover:text-[#39DB4A] transition-all `}
-          >
-            {link.name}
-          </Link>
-        );
-      })}
+    <nav className={styles["nav-container"]}>
+      {links.map((link, index) => (
+        <Link
+          href={link.path}
+          key={index}
+          className={`${styles["nav-link"]} ${
+            link.path === pathname ? styles["active-link"] : ""
+          }`}
+        >
+          {link.name}
+        </Link>
+      ))}
     </nav>
   );
 };

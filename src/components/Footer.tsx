@@ -1,55 +1,56 @@
 import React from "react";
-import Image from "next/image"; // Import Image component from Next.js
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
+import styles from "@/styles/Footer.module.css"; // Import CSS module
 
 const Footer = () => {
   return (
-    <footer className="py-12">
-      <div className="container mx-auto px-8">
+    <footer className={styles.footer}>
+      <div className={styles.container}>
         {/* Grid Container */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className={styles.gridContainer}>
           {/* Logo Section */}
-          <div className="space-y-4">
+          <div className={styles.logoSection}>
             <Image
-              src="/foodi.png" // Path to your image
+              src="/foodi.png"
               alt="Foodi Logo"
-              width={130} // Adjust to your desired width
-              height={30} // Adjust to your desired height
+              width={130}
+              height={30}
               className="object-contain"
             />
-            <p className="text-gray-600">
+            <p>
               Savor the artistry where <br /> every dish is a culinary <br />{" "}
               masterpiece
             </p>
           </div>
 
           {/* Useful Links Section */}
-          <div className="space-y-4">
-            <h2 className="text-xl font-bold text-gray-800">Useful Links</h2>
-            <ul className="space-y-2 text-gray-600">
-              <li>
-                <Link href="/about" className="hover:text-green-500">
+          <div>
+            <h2 className={styles.sectionTitle}>Useful Links</h2>
+            <ul className={styles.linkList}>
+              <li className={styles.linkItem}>
+                <Link href="/about" className={styles.link}>
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link href="/contact" className="hover:text-green-500">
+              <li className={styles.linkItem}>
+                <Link href="/contact" className={styles.link}>
                   Contact
                 </Link>
               </li>
-              <li>
-                <Link href="/event" className="hover:text-green-500">
+              <li className={styles.linkItem}>
+                <Link href="/" className={styles.link}>
                   Events
                 </Link>
               </li>
-              <li>
-                <Link href="/blog" className="hover:text-green-500">
+              <li className={styles.linkItem}>
+                <Link href="/" className={styles.link}>
                   Blogs
                 </Link>
               </li>
-              <li>
-                <Link href="/faq" className="hover:text-green-500">
+              <li className={styles.linkItem}>
+                <Link href="/" className={styles.link}>
                   FAQ
                 </Link>
               </li>
@@ -57,26 +58,26 @@ const Footer = () => {
           </div>
 
           {/* Main Menu Section */}
-          <div className="space-y-4">
-            <h2 className="text-xl font-bold text-gray-800">Main Menu</h2>
-            <ul className="space-y-2 text-gray-600">
-              <li>
-                <Link href="/" className="hover:text-green-500">
+          <div>
+            <h2 className={styles.sectionTitle}>Main Menu</h2>
+            <ul className={styles.linkList}>
+              <li className={styles.linkItem}>
+                <Link href="/" className={styles.link}>
                   Home
                 </Link>
               </li>
-              <li>
-                <Link href="/offers" className="hover:text-green-500">
+              <li className={styles.linkItem}>
+                <Link href="/" className={styles.link}>
                   Offers
                 </Link>
               </li>
-              <li>
-                <Link href="/menu" className="hover:text-green-500">
+              <li className={styles.linkItem}>
+                <Link href="/" className={styles.link}>
                   Menus
                 </Link>
               </li>
-              <li>
-                <Link href="/reservation" className="hover:text-green-500">
+              <li className={styles.linkItem}>
+                <Link href="/" className={styles.link}>
                   Reservation
                 </Link>
               </li>
@@ -84,38 +85,43 @@ const Footer = () => {
           </div>
 
           {/* Contact Us Section */}
-          <div className="space-y-4">
-            <h2 className="text-xl font-bold text-gray-800">Contact Us</h2>
-            <ul className="space-y-2 text-gray-600">
+          <div>
+            <h2 className={styles.sectionTitle}>Contact Us</h2>
+            <ul className={styles.contactList}>
               <li>
-                <Link
-                  href="mailto:example@email.com"
-                  className="hover:text-green-500"
-                >
+                <Link href="mailto:mk7275374@gmail.com" className={styles.link}>
                   mk7275374@gmail.com
                 </Link>
               </li>
               <li>
-                <Link href="tel:+923313007384" className="hover:text-green-500">
+                <Link href="tel:+923313007384" className={styles.link}>
                   +92 331 300 7384
                 </Link>
               </li>
               <li>Follow Us:</li>
               {/* Social Media Icons */}
-              <div className="flex space-x-4 text-gray-500">
-                <FaFacebook className="w-6 h-6 cursor-pointer hover:text-green-500" />
-                <FaTwitter className="w-6 h-6 cursor-pointer hover:text-green-500" />
-                <FaInstagram className="w-6 h-6 cursor-pointer hover:text-green-500" />
+              <div className={styles.socialIcons}>
+                <Link href="https://www.facebook.com/profile.php?id=100083043400837">
+                  <FaFacebook className={styles.socialIcon} />
+                </Link>
+                <Link href="#">
+                  <FaTwitter className={styles.socialIcon} />
+                </Link>
+                <Link href="#">
+                  <FaInstagram className={styles.socialIcon} />
+                </Link>
+                <Link href="#">
+                  <FaYoutube className={styles.socialIcon} />
+                </Link>
               </div>
             </ul>
           </div>
         </div>
-        <div className="justify-center">
-          {/* Copyright Section */}
-          <div className="mt-8 text-center text-[#555555] text-xl">
-            Copyright &copy; {new Date().getFullYear()} Foodi | All Rights
-            Reserved.
-          </div>
+
+        {/* Copyright Section */}
+        <div className={styles.copyright}>
+          Copyright &copy; {new Date().getFullYear()} Foodi | All Rights
+          Reserved.
         </div>
       </div>
     </footer>

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaYoutube, FaTwitter } from "react-icons/fa";
+import styles from "@/styles/Social.module.css";
 
-// Define the type for each social media item
 type SocialItem = {
-  icon: JSX.Element; // The icon is a JSX element
-  path: string; // The path is a string (URL)
+  icon: JSX.Element;
+  path: string;
 };
 
 const socials: SocialItem[] = [
@@ -14,17 +14,11 @@ const socials: SocialItem[] = [
   { icon: <FaTwitter />, path: "" },
 ];
 
-// Define the types for the props of the Social component
-interface SocialProps {
-  containerStyles: string;
-  iconStyles: string;
-}
-
-const Social: React.FC<SocialProps> = ({ containerStyles, iconStyles }) => {
+const Social: React.FC = () => {
   return (
-    <div className={containerStyles}>
+    <div className={styles["social-container"]}>
       {socials.map((item, index) => (
-        <Link key={index} href={item.path} className={iconStyles}>
+        <Link key={index} href={item.path} className={styles["social-icon"]}>
           {item.icon}
         </Link>
       ))}

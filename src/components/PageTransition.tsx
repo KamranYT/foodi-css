@@ -2,8 +2,8 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import styles from "@/styles/PageTransition.module.css";
 
-// Define the type for the component props, including children
 interface PageTransitionProps {
   children: React.ReactNode;
 }
@@ -13,14 +13,14 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
 
   return (
     <AnimatePresence>
-      <div key={pathname}>
+      <div key={pathname} className={styles["page-transition-container"]}>
         <motion.div
           initial={{ opacity: 1 }}
           animate={{
             opacity: 0,
             transition: { delay: 1.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="h-screen w-screen fixed bg-[#39DB4A] top-0 pointer-events-none"
+          className={styles["page-transition-overlay"]}
         />
         {children}
       </div>

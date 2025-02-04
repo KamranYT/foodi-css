@@ -2,30 +2,20 @@
 
 import { useSwiper } from "swiper/react";
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
+import styles from "@/styles/WorkSliderBtns.module.css"; // Import CSS module
 
-// Define the prop types
-type WorkSliderBtnsProps = {
-  containerStyles: string;
-  btnStyles: string;
-  iconsStyle: string;
-};
-
-const WorkSliderBtns: React.FC<WorkSliderBtnsProps> = ({
-  containerStyles,
-  btnStyles,
-  iconsStyle,
-}) => {
+const WorkSliderBtns: React.FC = () => {
   const swiper = useSwiper();
 
   return (
-    <div className={containerStyles}>
+    <div className={styles["slider-btn-container"]}>
       {/* Previous slide button */}
-      <button className={btnStyles} onClick={() => swiper.slidePrev()}>
-        <PiCaretLeftBold className={iconsStyle} />
+      <button className={styles["slider-btn"]} onClick={() => swiper.slidePrev()}>
+        <PiCaretLeftBold className={styles["slider-icon"]} />
       </button>
       {/* Next slide button */}
-      <button className={btnStyles} onClick={() => swiper.slideNext()}>
-        <PiCaretRightBold className={iconsStyle} />
+      <button className={styles["slider-btn"]} onClick={() => swiper.slideNext()}>
+        <PiCaretRightBold className={styles["slider-icon"]} />
       </button>
     </div>
   );

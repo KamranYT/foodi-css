@@ -1,57 +1,54 @@
 "use client";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { DialogTitle } from "@radix-ui/react-dialog"; // Import DialogTitle for accessibility
+import { DialogTitle } from "@radix-ui/react-dialog";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
 import Image from "next/image";
+import styles from "@/styles/MobileNav.module.css";
 
-// Define the type for each link in the links array
 interface LinkItem {
   name: string;
   path: string;
 }
 
-// Define the links array with typed objects
 const links: LinkItem[] = [
   { name: "home", path: "/" },
-  { name: "services", path: "/services" },
-  { name: "Menu", path: "/menu" },
-  { name: "offers", path: "/offers" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
 ];
 
 const MobileNav: React.FC = () => {
-  const pathname = usePathname(); // pathname will be a string
+  const pathname = usePathname();
 
   return (
     <Sheet>
       {/* Menu Icon */}
-      <SheetTrigger className="flex justify-center items-center">
-        <CiMenuFries className="text-[32px] text-black" />
+      <SheetTrigger className={styles["menu-trigger"]}>
+        <CiMenuFries className={styles["menu-icon"]} />
       </SheetTrigger>
 
       {/* Sheet Content */}
-      <SheetContent className="flex flex-col">
-        {/* Required DialogTitle */}
-        <DialogTitle className="sr-only">Navigation Menu</DialogTitle>{" "}
-        {/* Visually hidden title */}
+      <SheetContent className={styles["sheet-content"]}>
+        <DialogTitle className="sr-only">Navigation Menu</DialogTitle>
+
         {/* Logo Section */}
-        <div className="mt-32 mb-40 ml-24 text-4xl">
+        <div className={styles["logo-container"]}>
           <Link href="/">
             <Image src="/foodi.png" alt="Foodi Logo" width={150} height={1} />
           </Link>
         </div>
+
         {/* Navigation Links */}
-        <nav className="flex flex-col justify-center items-center gap-8">
+        <nav className={styles["nav-links"]}>
           {links.map((link, index) => (
             <Link
               href={link.path}
               key={index}
-              className={`${
-                link.path === pathname &&
-                "text-[#39DB4A] border-b-2 border-[#39DB4A]"
-              } capitalize font-medium hover:text-[#39DB4A] transition-all`}
+              className={`${styles["nav-link"]} ${
+                link.path === pathname ? styles["active-link"] : ""
+              }`}
             >
               {link.name}
             </Link>

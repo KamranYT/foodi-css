@@ -1,0 +1,64 @@
+.header {
+    padding: 2rem 0;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 1280px) {
+    .header {
+      padding: 3rem 0;
+    }
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: block;
+  }
+  
+  .nav-container {
+    display: none;
+  }
+  
+  @media (min-width: 1280px) {
+    .nav-container {
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+    }
+  }
+  
+  .contact-button {
+    height: 4rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: #5fe26c;
+    padding: 0 2rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .contact-button:hover {
+    background-color: #2eb93d;
+  }
+  
+  .mobile-nav {
+    display: block;
+  }
+  
+  @media (min-width: 1280px) {
+    .mobile-nav {
+      display: none;
+    }
+  }
+  

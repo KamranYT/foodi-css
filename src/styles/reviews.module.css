@@ -1,0 +1,136 @@
+/* TestimonialSection.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      flex-direction: row;
+      padding: 4rem;
+    }
+  }
+  
+  .imageWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 50%;
+  }
+  
+  .imageContainer {
+    position: relative;
+  }
+  
+  .chefImage {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+  }
+  
+  .greenCircle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #c1f1c6;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .yellowCircle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #fdf5c9;
+    border-radius: 50%;
+  }
+  
+  .badge {
+    position: absolute;
+    bottom: 2px;
+    background: white;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .textContent {
+    text-align: center;
+    max-width: 50%;
+  }
+  
+  @media (min-width: 1024px) {
+    .textContent {
+      text-align: left;
+    }
+  }
+  
+  .testimonials {
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  
+  .description {
+    color: #555;
+    font-size: 16px;
+    font-weight: medium;
+    margin-bottom: 16px;
+  }
+  
+  .feedbackContainer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .avatarGroup {
+    display: flex;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -10px;
+  }
+  
+  .rating {
+    text-align: left;
+  }
+  
+  .feedbackTitle {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .feedbackText {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .ratingStar {
+    font-weight: bold;
+    color: #454545;
+  }
+  

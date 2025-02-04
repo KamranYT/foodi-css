@@ -1,0 +1,15 @@
+/* PageTransition.module.css */
+
+.page-transition-container {
+    position: relative;
+  }
+  
+  .page-transition-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background: #39db4a;
+    pointer-events: none;
+  }
+  

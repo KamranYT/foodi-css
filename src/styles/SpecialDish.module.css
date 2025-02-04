@@ -1,0 +1,130 @@
+/* SpecialDish.module.css */
+
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .header {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+  .section-title {
+    color: #ff4f4f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .main-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .carousel-container {
+    position: relative;
+  }
+  
+  .arrows {
+    position: absolute;
+    top: -4rem;
+    right: 0;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .arrow-button {
+    background: #4caf50;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .arrow-button:hover {
+    background: #388e3c;
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: calc(33.33% - 1rem);
+    padding: 1rem;
+    position: relative;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  .card-content {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+  
+  .price-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  
+  .like-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #e0f7e0;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #4caf50;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .like-button.liked {
+    background: #39db4a;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .main-heading {
+      font-size: 2rem;
+    }
+  
+    .arrows {
+      top: -3rem;
+    }
+  
+    .card {
+      max-width: calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel {
+      flex-direction: column;
+    }
+  
+    .card {
+      max-width: 100%;
+    }
+  
+    .arrows {
+      top: -2rem;
+    }
+  }
+  

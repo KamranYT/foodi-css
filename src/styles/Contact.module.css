@@ -1,0 +1,142 @@
+/* Contact.module.css */
+.container {
+    padding: 3rem 1.5rem;
+    background-color: #f9f9f9;
+  }
+  
+  .innerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .innerContainer {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+  
+  /* Left Section */
+  .leftSection h1 {
+    color: #ff6868;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+  
+  .leftSection h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 1rem;
+  }
+  
+  .leftSection p {
+    color: #555;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .contactDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .contactItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .contactIcon {
+    color: #39db4a;
+    font-size: 1.8rem;
+  }
+  
+  .contactText {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  /* Right Section (Form) */
+  .formContainer {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formContainer h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .inputGroup {
+    margin-bottom: 1.5rem;
+  }
+  
+  .label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  .inputField:focus {
+    border-color: #39db4a;
+    box-shadow: 0 0 5px rgba(57, 219, 74, 0.5);
+  }
+  
+  .textareaField {
+    resize: none;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .submitButton {
+    background: #39db4a;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .submitButton:hover {
+    background: #2eb93d;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .leftSection h2 {
+      font-size: 2rem;
+    }
+  }
+  

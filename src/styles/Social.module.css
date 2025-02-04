@@ -1,0 +1,18 @@
+/* Social.module.css */
+
+.social-container {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .social-icon {
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: black;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    color: #39db4a; /* Hover effect */
+  }
+  

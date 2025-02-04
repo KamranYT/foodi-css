@@ -25,7 +25,6 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
     <html lang="en">
       <body className={`${jetbrainsMono.variable} ${jetbrainsMono.variable} antialiased`}>
         <Header />
-        
         <StairTransition />
         <PageTransition>
           {children}

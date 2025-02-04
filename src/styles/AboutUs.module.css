@@ -1,0 +1,161 @@
+/* AboutUs.module.css */
+.container {
+    padding: 3rem 1.5rem;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .subHeading {
+    color: #FF6868;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    color: #555555;
+    font-size: 1.2rem;
+    max-width: 40rem;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .aboutImage {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .storyText {
+    text-align: center;
+    max-width: 500px;
+  }
+  
+  .storyHeading {
+    color: #39DB4A;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .storyDescription {
+    color: #555555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .valuesSection {
+    background: #F9F9F9;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+  }
+  
+  .valuesHeading {
+    text-align: center;
+    font-size: 2rem;
+    color: #39DB4A;
+    margin-bottom: 2rem;
+  }
+  
+  .valuesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .valueTitle {
+    color: #FF6868;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .valueDescription {
+    color: #555555;
+    font-size: 1.1rem;
+  }
+  
+  .teamSection {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .teamHeading {
+    font-size: 2rem;
+    color: #39DB4A;
+    margin-bottom: 2rem;
+  }
+  
+  .teamGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .teamMember {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .teamImage {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .teamName {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #5FE26C;
+  }
+  
+  .teamRole {
+    color: #555555;
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .introduction {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  
+    .storyText {
+      text-align: left;
+    }
+  
+    .valuesGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .teamGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  

@@ -1,0 +1,147 @@
+.services-section {
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  @media (min-width: 768px) {
+    .services-section {
+      flex-direction: row;
+      padding: 3rem 3rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .services-section {
+      padding: 3rem 5rem;
+    }
+  }
+  
+  .left-section {
+    flex: 1;
+    max-width: 40rem;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .left-section {
+      text-align: left;
+    }
+  }
+  
+  .section-title {
+    color: #ff6868;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+  }
+  
+  .section-heading {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.2;
+  }
+  
+  @media (min-width: 768px) {
+    .section-heading {
+      font-size: 3rem;
+    }
+  }
+  
+  .section-description {
+    color: #555555;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  @media (min-width: 768px) {
+    .section-description {
+      font-size: 1.25rem;
+    }
+  }
+  
+  .order-button {
+    height: 4rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: #5fe26c;
+    padding: 0 2rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .order-button:hover {
+    background-color: #2eb93d;
+  }
+  
+  /* Right Section - Service Grid */
+  .service-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 40rem;
+  }
+  
+  @media (min-width: 640px) {
+    .service-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0f7df;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #5fe26c;
+    text-align: center;
+  }
+  
+  .service-description {
+    color: #90bd95;
+    text-align: center;
+    max-width: 12.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  

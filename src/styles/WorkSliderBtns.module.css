@@ -1,0 +1,27 @@
+/* WorkSliderBtns.module.css */
+
+.slider-btn-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slider-btn {
+    background-color: #39db4a;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .slider-btn:hover {
+    background-color: #2ea73a;
+  }
+  
+  .slider-icon {
+    color: white;
+    font-size: 20px;
+  }
+  
